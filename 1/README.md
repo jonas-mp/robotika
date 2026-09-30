@@ -1,5 +1,5 @@
-# Robotika - 1 ND
-Projektas yra (netikras) detonatorius. Gavęs mygtuko paspaudimą, detonatorius 8 segmentų ekranuose rodo skaičius nuo 10 iki 0, ir tada pradeda pypsėti. Kolonėlei pypsint, ekranuose mirksi skaičius 0.
+# Robot ika - 1 ND
+Projektas yra (netikras, žaislinis) detonatorius. Gavęs mygtuko paspaudimą, detonatorius 8 segmentų ekranuose rodo skaičius nuo 10 iki 0, ir tada pradeda pypsėti. Kolonėlei pypsint, ekranuose mirksi skaičius 0.
 
 Yra 2 projekto variantai:
 - padarytas tik naudojant arduino (sunaudojant visus digital pinus, ir 2 analog pinus)
@@ -23,5 +23,16 @@ states[skaitmuo] & (1 << segmentas);
 
 Šią pačią procedūrą savaime atlieka ir shift registras, todėl buvo labai paprasta konvertuoti kodą shift registrams.
 
-## Tikros bombos pajungimas
+## Panaudotos dalys (2 var.)
+- Arduino UNO
+- Du 8 segmentų ekranai
+- Mygtukas
+- Du 74HC595 shift registrai
+- Du 220 Ohm rezistoriai
+- Garsiakalbis
+- Laidai
+
+![Screenshot](./screenshot.png)
+
+## Ateities patobulinimai - tikros bombos pajungimas
 Galima būtų prijungti ir tranzistorių (NPN, su pull down resistorium), kuris galėtų valdyti didesnę srovę. Tokiu būdu galima užkaitinti vielą (nežinau kaip veikia tikri detonatoriai).
